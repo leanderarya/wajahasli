@@ -318,7 +318,7 @@ with tab_vid:
         with open(temp_output, "rb") as f:
             video_bytes = f.read()
 
-        col_left, col_center, col_right = st.columns([1, 2, 1])
+        col_left, col_center, col_right = st.columns([2, 2, 2])
 
         with col_center:
             st.video(video_bytes)
