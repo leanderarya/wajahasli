@@ -318,7 +318,10 @@ with tab_vid:
         with open(temp_output, "rb") as f:
             video_bytes = f.read()
 
-        st.video(video_bytes)
+        col_left, col_center, col_right = st.columns([1, 2, 1])
+
+        with col_center:
+            st.video(video_bytes)
 
         st.download_button(
             label="📥 Unduh Video Hasil",
